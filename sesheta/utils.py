@@ -135,6 +135,8 @@ def notify_channel(kind: str, message: str, url: str) -> None:
         response = chat.spaces().messages().create(parent=THOTH_DEVOPS_SPACE, body=create_issue_response(message, url))
     elif kind.upper() == "MERGED_PULL_REQUEST":
         response = chat.spaces().messages().create(parent=THOTH_DEVOPS_SPACE, body={"text": message})
+    elif kind.upper() == "PROMETHEUS_ALERT":
+        response = chat.spaces().messages().create(parent=THOTH_DEVOPS_SPACE, body={"text": message})
 
     if response is not None:
         response.execute()
