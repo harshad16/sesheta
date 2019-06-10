@@ -105,4 +105,5 @@ if __name__ == "__main__":
     response = chat.spaces().messages().create(parent=SPACE, body=response, threadKey=THREAD_KEY)
 
     if response is not None:
-        response.execute()
+        thread_result = response.execute()
+        _LOGGER.info(thread_result)
