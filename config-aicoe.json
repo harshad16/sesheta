@@ -3,7 +3,11 @@
     "repositories": [
         "sesheta",
         "prometheus-flatliner",
-        "log-anomaly-detector"
+        "log-anomaly-detector",
+        "prometheus-api-client-python",
+        "prometheus-anomaly-detector-legacy",
+        "prometheus-scraper",
+        "prometheus-anomaly-detector"
     ],
     "defaultTopics": [
         "aicoe"
